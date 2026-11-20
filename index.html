@@ -1,10 +1,18 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
-<title>Task Board</title>
-<meta name="claude:viewport-fit-sides" content="cover">
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Invention Studio Task Board</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap">
 <style>
+[hidden]{display:none!important}
+body{margin:0}
+img{max-width:100%}
+
 /* Layout: charcoal brand header with a hazard stripe and tabs (Task board / Completed / Me) over a priority-sorted card grid; a welcome card holds back everything until a name is saved. */
 :root{
   --bg:#1C1C1C; --surface:#272727; --surface-2:#323232; --fg:#F2F2F2; --muted:#A6A6A6; --line:#404040;
@@ -162,7 +170,22 @@ textarea.input{min-height:96px;resize:vertical}
   .who{display:none}
 }
 @media (prefers-reduced-motion: reduce){.card{transition:none}}
+
 </style>
+</head>
+<body>
+
+<!-- ============================================================
+     SETTINGS: fill in the two values below (see SETUP.md).
+     The Supabase URL and anon key are meant to be public.
+     Access is enforced by the database rules in setup.sql.
+     ============================================================ -->
+<script>
+window.TASKBOARD_CONFIG = {
+  supabaseUrl: "https://blfildycbzrtxiizswaa.supabase.co/rest/v1/",
+  supabaseKey: "sb_publishable_77YMmqUcO1rIo5lKR0Ug_Q_TlTsZbsz"
+};
+</script>
 
 <header class="hdr">
   <div class="inner hdr-top">
@@ -176,7 +199,7 @@ textarea.input{min-height:96px;resize:vertical}
   <nav class="inner tabs" id="tabs" aria-label="Sections" hidden>
     <button class="tab" type="button" data-v="board">Task board <span class="badge" id="boardBadge" hidden>0</span></button>
     <button class="tab" type="button" data-v="completed">Completed</button>
-    <button class="tab" type="button" data-v="me" id="meTab">Me</button>
+    <button class="tab" type="button" data-v="me">Me</button>
   </nav>
   <div class="stripe" aria-hidden="true"></div>
 </header>
@@ -193,6 +216,11 @@ textarea.input{min-height:96px;resize:vertical}
       <div class="field">
         <label for="w-name">Your name</label>
         <input class="input" id="w-name" maxlength="60" required autocomplete="name" placeholder="First Last">
+      </div>
+      <div class="field" id="w-code-field" hidden>
+        <label for="w-code">Access code</label>
+        <input class="input" id="w-code" maxlength="100" autocomplete="off" spellcheck="false">
+        <p class="hint">Ask an Invention Studio officer for the code. You only enter it once on each device.</p>
       </div>
       <div class="form-actions">
         <button class="btn primary" id="w-go" type="submit">Continue</button>
@@ -212,7 +240,7 @@ textarea.input{min-height:96px;resize:vertical}
           <button class="chip" type="button" data-f="low" aria-pressed="false">Low <span class="n" id="n-low">0</span></button>
         </div>
       </div>
-      <button class="btn primary" id="newBtn" type="button" aria-expanded="false" aria-controls="composer" hidden>New task</button>
+      <button class="btn primary" id="newBtn" type="button" aria-expanded="false" aria-controls="composer">New task</button>
     </div>
 
     <form class="composer" id="composer" hidden>
@@ -254,7 +282,7 @@ textarea.input{min-height:96px;resize:vertical}
     <section class="empty" id="empty" hidden>
       <h2 id="emptyTitle">No open tasks</h2>
       <p id="emptyMsg">Everything on the board has been completed.</p>
-      <button class="btn primary" id="emptyBtn" type="button" hidden>Post a task</button>
+      <button class="btn primary" id="emptyBtn" type="button">Post a task</button>
     </section>
   </section>
 
@@ -275,8 +303,12 @@ textarea.input{min-height:96px;resize:vertical}
         <label for="me-name">Your name</label>
         <input class="input" id="me-name" maxlength="60" required autocomplete="name">
       </div>
-      <div class="form-actions"><button class="btn primary" id="me-save" type="submit">Save name</button></div>
+      <div class="form-actions">
+        <button class="btn primary" id="me-save" type="submit">Save name</button>
+        <button class="btn" id="signOutBtn" type="button">Sign out</button>
+      </div>
       <p class="status" id="me-status" role="status"></p>
+      <p class="hint">Using a shared computer? Sign out so the next person can enter their own name.</p>
     </form>
   </section>
 
@@ -292,6 +324,7 @@ textarea.input{min-height:96px;resize:vertical}
 
 <div class="toast" id="toast" role="status" hidden><span id="toastMsg"></span><button id="toastUndo" type="button" hidden>Undo</button></div>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
 <script>
 (function(){
   var $ = function(s){ return document.querySelector(s); };
@@ -301,13 +334,17 @@ textarea.input{min-height:96px;resize:vertical}
     if (text != null) n.textContent = text;
     return n;
   }
-  var MAX_PHOTOS = 4;
+
+  var cfg = window.TASKBOARD_CONFIG || {};
+  var configured = !!(cfg.supabaseUrl && cfg.supabaseKey && cfg.supabaseUrl.indexOf("PASTE") < 0 && cfg.supabaseKey.indexOf("PASTE") < 0);
+  var MAX_PHOTOS = 4, BUCKET = "task-photos", URL_TTL = 12 * 3600;
   var PRI = { high: { label: "High", rank: 0 }, medium: { label: "Medium", rank: 1 }, low: { label: "Low", rank: 2 } };
   function priKey(t){ return t && PRI[t.priority] ? t.priority : "medium"; }
 
-  var db = null, assets = null, user = null, uid = null, canWrite = true;
+  var sb = null, session = null, uid = null, sessionChecked = false, lastKey = null;
+  var isMember = false, needsCode = false, memberChecked = false, anonFailed = false;
   var people = new Map(), myName = "", peopleReady = false;
-  var tasks = new Map(), doneTasks = new Map(), commentsByTask = new Map(), cards = new Map();
+  var tasks = new Map(), doneTasks = new Map(), commentsByTask = new Map(), cards = new Map(), urlCache = new Map();
   var tasksLoaded = false, doneLoaded = false;
   var filter = "all", view = "board", appState = "init", pending = [];
 
@@ -316,6 +353,15 @@ textarea.input{min-height:96px;resize:vertical}
 
   function setNotice(msg){ notice.textContent = msg || ""; notice.hidden = !msg; }
   function setStatus(node, msg, isErr){ node.textContent = msg || ""; node.className = "status" + (isErr ? " err" : ""); }
+  function errMessage(err, fallback){
+    var m = err && err.message ? String(err.message) : "";
+    if (/row-level security|violates|permission denied|not allowed/i.test(m)) return "Your account isn't allowed to do that.";
+    return fallback;
+  }
+  function uuid(){
+    if (window.crypto && crypto.randomUUID) return crypto.randomUUID();
+    return Date.now().toString(36) + Math.random().toString(36).slice(2, 10);
+  }
 
   function ago(ts){
     if (!ts) return "";
@@ -370,10 +416,24 @@ textarea.input{min-height:96px;resize:vertical}
     if (f) f();
   });
 
+  /* ---------- photos: private bucket, signed links ---------- */
+  function urlFor(path){ var u = urlCache.get(path); return u ? u.url : ""; }
+  function ensureUrls(paths){
+    var now = Date.now();
+    var need = paths.filter(function(p){ var u = urlCache.get(p); return !u || u.exp - now < 3600e3; });
+    if (!need.length) return Promise.resolve();
+    return sb.storage.from(BUCKET).createSignedUrls(need, URL_TTL).then(function(r){
+      if (r.error || !r.data) return;
+      r.data.forEach(function(d){
+        if (d && d.signedUrl && d.path) urlCache.set(d.path, { url: d.signedUrl, exp: now + URL_TTL * 1000 });
+      });
+    }).catch(function(){});
+  }
+
   /* ---------- lightbox ---------- */
   var lbIds = [], lbIndex = 0, lbOpener = null;
   function lbShow(){
-    $("#lbImg").src = "/_blob/" + lbIds[lbIndex];
+    $("#lbImg").src = urlFor(lbIds[lbIndex]);
     $("#lbPrev").hidden = $("#lbNext").hidden = lbIds.length < 2;
   }
   function openLightbox(ids, index, opener){
@@ -405,28 +465,29 @@ textarea.input{min-height:96px;resize:vertical}
   }
   function applyView(){
     var app = appState === "app";
-    if (view === "me" && !canWrite) view = "board";
     ["board", "completed", "me"].forEach(function(v){
       $("#view-" + v).hidden = !(app && view === v);
     });
     document.querySelectorAll(".tab").forEach(function(b){
       if (b.dataset.v === view) b.setAttribute("aria-current", "page"); else b.removeAttribute("aria-current");
     });
-    $("#meTab").hidden = !canWrite;
     if (app && view === "me"){
       var inp = $("#me-name");
       if (document.activeElement !== inp) inp.value = myName;
     }
   }
   function route(){
-    if (!db || !uid) appState = "init";
-    else if (!peopleReady) appState = "loading";
-    else if (canWrite && !myName) appState = "welcome";
+    if (!configured || !sb) appState = "init";
+    else if (!sessionChecked || !uid || !memberChecked) appState = "checking";
+    else if (!isMember) appState = "welcome";
+    else if (!peopleReady) appState = "checking";
+    else if (!myName) appState = "welcome";
     else appState = "app";
-    $("#loading").hidden = appState !== "loading";
+    $("#loading").hidden = appState !== "checking" || anonFailed;
     $("#welcome").hidden = appState !== "welcome";
     $("#tabs").hidden = appState !== "app";
     $("#whoChip").hidden = !(appState === "app" && myName);
+    $("#w-code-field").hidden = isMember || !needsCode;
     applyView();
   }
   document.querySelectorAll(".tab").forEach(function(b){
@@ -439,23 +500,52 @@ textarea.input{min-height:96px;resize:vertical}
   window.addEventListener("hashchange", function(){ view = readHash(); applyView(); });
   view = readHash();
 
+  /* ---------- name, joining, sign out ---------- */
+  function signOut(){
+    var b = $("#signOutBtn"); b.disabled = true;
+    sb.auth.signOut().catch(function(){}).then(function(){ b.disabled = false; });
+  }
+  $("#signOutBtn").addEventListener("click", signOut);
+
   function saveName(raw, statusNode, btn){
     var name = String(raw || "").replace(/\s+/g, " ").trim();
     if (!name){ setStatus(statusNode, "Enter your name.", true); return Promise.resolve(false); }
     btn.disabled = true; setStatus(statusNode, "Saving…");
-    return db.doc("people/" + uid).set({ name: name, updatedAt: Date.now() }).then(function(){
+    return sb.from("profiles").upsert({ id: uid, name: name, updated_at: new Date().toISOString() }).select("id").then(function(r){
+      if (r.error || !r.data || !r.data.length) throw (r.error || new Error("not allowed"));
       people.set(uid, name); myName = name; peopleReady = true;
       refreshNames(); route();
       setStatus(statusNode, "");
       return true;
-    }).catch(function(){
-      setStatus(statusNode, "Couldn't save your name. Check your connection and try again.", true);
+    }).catch(function(err){
+      setStatus(statusNode, errMessage(err, "Couldn't save your name. Check your connection and try again."), true);
       return false;
     }).then(function(ok){ btn.disabled = false; return ok; });
   }
   $("#welcomeForm").addEventListener("submit", function(e){
     e.preventDefault();
-    saveName($("#w-name").value, $("#w-status"), $("#w-go"));
+    var st = $("#w-status"), btn = $("#w-go");
+    var nm = $("#w-name").value.replace(/\s+/g, " ").trim();
+    var code = $("#w-code").value;
+    if (!nm){ setStatus(st, "Enter your name.", true); return; }
+    if (!isMember && needsCode && !code.trim()){ setStatus(st, "Enter the access code.", true); return; }
+    btn.disabled = true; setStatus(st, "Checking…");
+    var joined = isMember ? Promise.resolve(true) : sb.rpc("join_board", { code: code }).then(function(r){
+      if (r.error) throw r.error;
+      if (r.data !== true) return false;
+      isMember = true; startLive();
+      return true;
+    });
+    joined.then(function(ok){
+      if (!ok){
+        setStatus(st, "That access code isn't right. Ask an officer for the current code.", true);
+        btn.disabled = false; return;
+      }
+      return saveName(nm, st, btn).then(function(saved){ if (saved) loadAll(); });
+    }).catch(function(err){
+      setStatus(st, errMessage(err, "Couldn't join the board. Check your connection and try again."), true);
+      btn.disabled = false;
+    });
   });
   $("#meForm").addEventListener("submit", function(e){
     e.preventDefault();
@@ -464,7 +554,7 @@ textarea.input{min-height:96px;resize:vertical}
     });
   });
 
-  /* ---------- pieces shared by board and log ---------- */
+  /* ---------- shared pieces ---------- */
   function pill(key){
     var k = PRI[key] ? key : "medium";
     var s = el("span", "pill p-" + k);
@@ -472,9 +562,11 @@ textarea.input{min-height:96px;resize:vertical}
     s.append(el("i", "dot"), PRI[k].label);
     return s;
   }
-  function makeImg(id, alt){
+  function makeImg(path, alt){
     var i = new Image();
-    i.loading = "lazy"; i.alt = alt || ""; i.src = "/_blob/" + id;
+    i.loading = "lazy"; i.alt = alt || "";
+    var u = urlFor(path);
+    if (u) i.src = u; else queueMicrotask(function(){ if (i.parentElement) i.parentElement.classList.add("broken"); });
     i.addEventListener("error", function(){
       i.style.visibility = "hidden";
       if (i.parentElement) i.parentElement.classList.add("broken");
@@ -492,7 +584,7 @@ textarea.input{min-height:96px;resize:vertical}
   /* ---------- board cards ---------- */
   function buildCard(id, t){
     var root = el("article", "card");
-    var parts = { root: root, id: id, sig: null, pri: priKey(t) };
+    var parts = { root: root, id: id, sig: null };
     var imgs = Array.isArray(t.images) ? t.images.filter(function(x){ return typeof x === "string"; }) : [];
 
     if (imgs.length){
@@ -504,10 +596,10 @@ textarea.input{min-height:96px;resize:vertical}
       media.appendChild(main);
       if (imgs.length > 1){
         var th = el("div", "thumbs");
-        imgs.slice(1, MAX_PHOTOS).forEach(function(iid, k){
+        imgs.slice(1, MAX_PHOTOS).forEach(function(p, k){
           var b = el("button", "thumb"); b.type = "button";
           b.setAttribute("aria-label", "View photo " + (k + 2));
-          b.appendChild(makeImg(iid, ""));
+          b.appendChild(makeImg(p, ""));
           b.addEventListener("click", function(){ openLightbox(imgs, k + 1, b); });
           th.appendChild(b);
         });
@@ -517,7 +609,7 @@ textarea.input{min-height:96px;resize:vertical}
     }
 
     var body = el("div", "card-body");
-    body.appendChild(pill(parts.pri));
+    body.appendChild(pill(priKey(t)));
     body.appendChild(el("h3", "card-title", t.title || "Untitled task"));
     if (t.description) body.appendChild(el("p", "card-desc", t.description));
     var meta = el("p", "meta");
@@ -528,42 +620,39 @@ textarea.input{min-height:96px;resize:vertical}
     var actions = el("div", "actions");
     var tog = el("button", "btn ghost", "Comment");
     tog.type = "button"; tog.setAttribute("aria-expanded", "false");
-    actions.appendChild(tog);
-    if (canWrite){
-      var doneBtn = el("button", "btn done", "Mark complete");
-      doneBtn.type = "button";
-      doneBtn.addEventListener("click", function(){ completeTask(id, root, doneBtn); });
-      actions.appendChild(doneBtn);
-    }
+    var doneBtn = el("button", "btn done", "Mark complete");
+    doneBtn.type = "button";
+    doneBtn.addEventListener("click", function(){ completeTask(id, root, doneBtn); });
+    actions.append(tog, doneBtn);
     root.appendChild(actions);
 
     var panel = el("div", "comments"); panel.hidden = true;
     var list = el("ul", "c-list");
-    panel.appendChild(list);
-    if (canWrite){
-      var form = el("form", "c-form");
-      var input = el("input", "input"); input.id = "c-" + id; input.maxLength = 1000; input.autocomplete = "off";
-      input.placeholder = "Add a comment"; input.setAttribute("aria-label", "Add a comment");
-      var post = el("button", "btn primary", "Post"); post.type = "submit";
-      form.append(input, post);
-      form.addEventListener("submit", function(e){
-        e.preventDefault();
-        var text = input.value.trim();
-        if (!text) return;
-        post.disabled = true;
-        db.collection("comments").add({ taskId: id, text: text, authorId: uid, createdAt: Date.now() })
-          .then(function(){ input.value = ""; })
-          .catch(function(){ showToast("Couldn't post your comment. Try again."); })
-          .then(function(){ post.disabled = false; input.focus(); });
-      });
-      panel.appendChild(form);
-    }
+    var form = el("form", "c-form");
+    var input = el("input", "input"); input.id = "c-" + id; input.maxLength = 1000; input.autocomplete = "off";
+    input.placeholder = "Add a comment"; input.setAttribute("aria-label", "Add a comment");
+    var post = el("button", "btn primary", "Post"); post.type = "submit";
+    form.append(input, post);
+    form.addEventListener("submit", function(e){
+      e.preventDefault();
+      var text = input.value.trim();
+      if (!text) return;
+      post.disabled = true;
+      sb.from("comments").insert({ task_id: id, text: text, author_id: uid }).then(function(r){
+        if (r.error) throw r.error;
+        input.value = "";
+        loadAll();
+      }).catch(function(err){
+        showToast(errMessage(err, "Couldn't post your comment. Try again."));
+      }).then(function(){ post.disabled = false; input.focus(); });
+    });
+    panel.append(list, form);
     root.appendChild(panel);
 
     tog.addEventListener("click", function(){
       panel.hidden = !panel.hidden;
       tog.setAttribute("aria-expanded", String(!panel.hidden));
-      if (!panel.hidden){ var i = panel.querySelector("input"); if (i) i.focus(); }
+      if (!panel.hidden) input.focus();
     });
 
     parts.tog = tog; parts.list = list;
@@ -615,10 +704,8 @@ textarea.input{min-height:96px;resize:vertical}
     if (none){
       if (counts.all === 0){
         $("#emptyTitle").textContent = "No open tasks";
-        $("#emptyMsg").textContent = canWrite
-          ? "Everything has been completed. Post a new one when something comes up."
-          : "Nothing is waiting right now.";
-        $("#emptyBtn").hidden = !canWrite;
+        $("#emptyMsg").textContent = "Everything has been completed. Post a new one when something comes up.";
+        $("#emptyBtn").hidden = false;
       } else {
         $("#emptyTitle").textContent = "No " + PRI[filter].label.toLowerCase() + " priority tasks";
         $("#emptyMsg").textContent = "Pick another filter to see the rest of the board.";
@@ -643,15 +730,14 @@ textarea.input{min-height:96px;resize:vertical}
       m2.append("Completed by ", who(t.doneBy), " · ", timeEl(t.doneAt));
       main.appendChild(m2);
       li.appendChild(main);
-      if (canWrite){
-        var b = el("button", "btn", "Reopen"); b.type = "button";
-        b.addEventListener("click", function(){
-          b.disabled = true;
-          db.doc("tasks/" + id).update({ done: false, doneBy: null, doneAt: null })
-            .catch(function(){ b.disabled = false; showToast("Couldn't reopen that task. Try again."); });
+      var b = el("button", "btn", "Reopen"); b.type = "button";
+      b.addEventListener("click", function(){
+        b.disabled = true;
+        setDone(id, false).then(function(){ loadAll(); }).catch(function(err){
+          b.disabled = false; showToast(errMessage(err, "Couldn't reopen that task. Try again."));
         });
-        li.appendChild(b);
-      }
+      });
+      li.appendChild(b);
       return li;
     }));
     $("#doneEmpty").hidden = !(doneLoaded && items.length === 0);
@@ -660,19 +746,27 @@ textarea.input{min-height:96px;resize:vertical}
     }
   }
 
+  function setDone(id, done){
+    var patch = done
+      ? { done: true, done_by: uid, done_at: new Date().toISOString() }
+      : { done: false, done_by: null, done_at: null };
+    return sb.from("tasks").update(patch).eq("id", id).select("id").then(function(r){
+      if (r.error) throw r.error;
+      if (!r.data || !r.data.length) throw new Error("not allowed");
+    });
+  }
   function completeTask(id, root, btn){
     root.classList.add("leaving"); btn.disabled = true;
-    db.doc("tasks/" + id).update({ done: true, doneBy: uid, doneAt: Date.now() })
-      .then(function(){
-        showToast("Marked complete. It's off the board.", function(){
-          db.doc("tasks/" + id).update({ done: false, doneBy: null, doneAt: null })
-            .catch(function(){ showToast("Couldn't undo. Reopen it from the Completed tab."); });
-        });
-      })
-      .catch(function(){
-        root.classList.remove("leaving"); btn.disabled = false;
-        showToast("Couldn't mark that complete. Try again.");
+    setDone(id, true).then(function(){
+      loadAll();
+      showToast("Marked complete. It's off the board.", function(){
+        setDone(id, false).then(function(){ loadAll(); })
+          .catch(function(){ showToast("Couldn't undo. Reopen it from the Completed tab."); });
       });
+    }).catch(function(err){
+      root.classList.remove("leaving"); btn.disabled = false;
+      showToast(errMessage(err, "Couldn't mark that complete. Try again."));
+    });
   }
 
   /* ---------- filters ---------- */
@@ -746,14 +840,7 @@ textarea.input{min-height:96px;resize:vertical}
     });
   });
 
-  function uploadMessage(err){
-    var code = err && err.code;
-    if (code === "too_large") return "One of the photos is too large.";
-    if (code === "quota_or_state") return "Photo storage is full. Post without photos or ask the board owner to free space.";
-    if (code === "rate_limited") return "Too many uploads at once. Wait a moment and try again.";
-    if (code === "unsupported_type") return "One of the photos isn't a supported type.";
-    return "Couldn't post the task. Check your connection and try again.";
-  }
+  var EXT = { "image/jpeg": "jpg", "image/png": "png", "image/webp": "webp", "image/gif": "gif" };
 
   composer.addEventListener("submit", function(e){
     e.preventDefault();
@@ -764,98 +851,183 @@ textarea.input{min-height:96px;resize:vertical}
     if (!title) return;
     var btn = $("#postBtn"); btn.disabled = true;
     setStatus(formStatus, pending.length ? "Uploading photos…" : "Posting…");
-    var ids = [];
+    var paths = [];
     pending.reduce(function(chain, p){
       return chain.then(function(){
-        return assets.upload(p.blob, { type: p.blob.type || "image/jpeg" }).then(function(r){ ids.push(r.id); });
+        var type = p.blob.type || "image/jpeg";
+        var path = uid + "/" + uuid() + "." + (EXT[type] || "jpg");
+        return sb.storage.from(BUCKET).upload(path, p.blob, { contentType: type, upsert: false }).then(function(r){
+          if (r.error) throw r.error;
+          paths.push(path);
+        });
       });
     }, Promise.resolve()).then(function(){
-      return db.collection("tasks").add({
-        title: title, description: desc, priority: priority, images: ids,
-        authorId: uid, createdAt: Date.now(), done: false
-      });
-    }).then(function(){
+      return sb.from("tasks").insert({ title: title, description: desc, priority: priority, images: paths, author_id: uid });
+    }).then(function(r){
+      if (r.error) throw r.error;
       resetComposer(); closeComposer();
+      return loadAll();
     }).catch(function(err){
-      setStatus(formStatus, uploadMessage(err), true);
+      setStatus(formStatus, errMessage(err, "Couldn't post the task. Check your connection and try again."), true);
     }).then(function(){ btn.disabled = false; });
   });
 
+  /* ---------- loading data ---------- */
+  function normTask(r){
+    return {
+      id: r.id, title: r.title, description: r.description || "", priority: r.priority,
+      images: Array.isArray(r.images) ? r.images : [], authorId: r.author_id,
+      createdAt: Date.parse(r.created_at) || 0, doneBy: r.done_by, doneAt: r.done_at ? Date.parse(r.done_at) : 0
+    };
+  }
+  var loading = null, queued = false, errShown = false;
+
+  function loadAll(){
+    if (!uid || !isMember) return Promise.resolve();
+    if (loading){ queued = true; return loading; }
+    var myUid = uid;
+    loading = Promise.all([
+      sb.from("profiles").select("id,name"),
+      sb.from("tasks").select("*").eq("done", false),
+      sb.from("tasks").select("*").eq("done", true).order("done_at", { ascending: false }).limit(100)
+    ]).then(function(r){
+      if (myUid !== uid) return null;
+      for (var i = 0; i < r.length; i++) if (r[i].error) throw r[i].error;
+      people = new Map();
+      (r[0].data || []).forEach(function(p){ if (p.name) people.set(p.id, p.name); });
+      myName = people.get(uid) || "";
+      peopleReady = true;
+      tasks = new Map();
+      (r[1].data || []).forEach(function(t){ tasks.set(t.id, normTask(t)); });
+      doneTasks = new Map();
+      (r[2].data || []).forEach(function(t){ doneTasks.set(t.id, normTask(t)); });
+      var ids = Array.from(tasks.keys());
+      var commentsP = ids.length
+        ? sb.from("comments").select("*").in("task_id", ids).order("created_at", { ascending: true })
+        : Promise.resolve({ data: [] });
+      return commentsP.then(function(cr){
+        if (cr.error) throw cr.error;
+        var map = new Map();
+        (cr.data || []).forEach(function(c){
+          if (!map.has(c.task_id)) map.set(c.task_id, []);
+          map.get(c.task_id).push({ id: c.id, authorId: c.author_id, text: String(c.text || ""), createdAt: Date.parse(c.created_at) || 0 });
+        });
+        commentsByTask = map;
+        var paths = [];
+        tasks.forEach(function(t){ t.images.slice(0, MAX_PHOTOS).forEach(function(p){ paths.push(p); }); });
+        return ensureUrls(paths);
+      });
+    }).then(function(res){
+      if (res === null) return;
+      tasksLoaded = true; doneLoaded = true;
+      if (errShown){ setNotice(""); errShown = false; }
+      refreshNames(); route(); renderBoard(); renderDone();
+    }).catch(function(){
+      if (!errShown){ setNotice("Couldn't reach the board. Retrying automatically."); errShown = true; }
+      if (!peopleReady) $("#loading").textContent = "Still trying to reach the board…";
+    }).then(function(){
+      loading = null;
+      if (queued){ queued = false; loadAll(); }
+    });
+    return loading;
+  }
+
+  /* ---------- live updates ---------- */
+  var channel = null, pollTimer = null, kickTimer = null;
+  function kick(){ clearTimeout(kickTimer); kickTimer = setTimeout(loadAll, 250); }
+  function startLive(){
+    if (channel) return;
+    channel = sb.channel("board")
+      .on("postgres_changes", { event: "*", schema: "public", table: "tasks" }, kick)
+      .on("postgres_changes", { event: "*", schema: "public", table: "comments" }, kick)
+      .on("postgres_changes", { event: "*", schema: "public", table: "profiles" }, kick)
+      .subscribe();
+    pollTimer = setInterval(function(){ if (!document.hidden) loadAll(); }, 60000);
+  }
+  function stopLive(){
+    if (channel){ try { sb.removeChannel(channel); } catch (e) {} channel = null; }
+    clearInterval(pollTimer); pollTimer = null; clearTimeout(kickTimer);
+  }
+  document.addEventListener("visibilitychange", function(){ if (!document.hidden) loadAll(); });
+
+  function resetData(){
+    stopLive();
+    people = new Map(); myName = ""; peopleReady = false;
+    isMember = false; needsCode = false; memberChecked = false;
+    tasks = new Map(); doneTasks = new Map(); commentsByTask = new Map(); urlCache = new Map();
+    tasksLoaded = false; doneLoaded = false;
+    grid.replaceChildren(); cards.clear();
+    $("#doneList").replaceChildren();
+    summary.textContent = "Loading tasks…";
+    $("#loading").textContent = "Loading the board…";
+    resetComposer(); closeComposer();
+    $("#w-name").value = ""; $("#w-code").value = ""; setStatus($("#w-status"), "");
+    setNotice(""); errShown = false;
+  }
+
+  function checkMembership(){
+    var myUid = uid;
+    Promise.all([sb.rpc("is_member"), sb.rpc("board_needs_code")]).then(function(r){
+      if (myUid !== uid) return;
+      if (r[0].error) throw r[0].error;
+      isMember = r[0].data === true;
+      needsCode = r[1].data === true;
+      memberChecked = true;
+      if (errShown){ setNotice(""); errShown = false; }
+      route();
+      if (isMember){ loadAll(); startLive(); }
+    }).catch(function(){
+      if (myUid !== uid) return;
+      if (!errShown){ setNotice("Couldn't reach the board. Retrying automatically."); errShown = true; }
+      setTimeout(function(){ if (myUid === uid && !memberChecked) checkMembership(); }, 8000);
+    });
+  }
+
+  function anonSignIn(){
+    sb.auth.signInAnonymously().then(function(r){
+      if (r.error || !r.data || !r.data.session) throw (r.error || new Error("no session"));
+    }).catch(function(){
+      anonFailed = true; route();
+      setNotice("Couldn't set up your access. If you're online, the site owner needs to turn on anonymous sign-ins in Supabase (see SETUP.md). Reload the page to try again.");
+    });
+  }
+
+  function onSession(s){
+    var id = s && s.user ? s.user.id : null;
+    var key = id || "none";
+    session = s;
+    if (sessionChecked && key === lastKey) return;
+    sessionChecked = true; lastKey = key;
+    if (id !== uid) resetData();
+    uid = id; anonFailed = false;
+    route();
+    if (!uid){ anonSignIn(); return; }
+    checkMembership();
+  }
+
   /* ---------- start ---------- */
   function start(){
-    var c = window.claude;
-    $("#loading").hidden = false;
-    if (!c || !c.use){ $("#loading").hidden = true; setNotice("Open this page in Claude to see and add tasks."); return; }
-    c.use("db").then(function(d){
-      db = d;
-      if (!db){ $("#loading").hidden = true; setNotice("Sign in to see and add tasks."); return null; }
-      return Promise.all([c.use("assets"), c.use("user")]);
-    }).then(function(r){
-      if (!r) return null;
-      assets = r[0]; user = r[1];
-      return user ? Promise.all([user.id(), user.can("data.write")]) : [null, null];
-    }).then(function(r){
-      if (!r) return;
-      uid = r[0]; canWrite = r[1] !== false;
-      if (!uid){
-        $("#loading").hidden = true;
-        setNotice("Sign in to Claude to use the board. Your name is tied to your account.");
-        return;
-      }
-      newBtn.hidden = !canWrite;
-      if (!canWrite) setNotice("You can read tasks here. Posting, commenting and completing need Contributor access.");
-      if (!assets) $("#photoField").hidden = true;
-
-      var timer = setTimeout(function(){
-        if (!peopleReady) $("#loading").textContent = "Still trying to reach the board…";
-        else if (!tasksLoaded) summary.textContent = "Still trying to reach the task list…";
-      }, 10000);
-      function fail(){ clearTimeout(timer); $("#loading").hidden = true; setNotice("Couldn't load the board. Reload the page to try again."); }
-
-      db.collection("people").onSnapshot(function(snap){
-        people = new Map();
-        snap.docs.forEach(function(d){
-          var v = d.data();
-          if (v && typeof v.name === "string" && v.name) people.set(d.id, v.name);
-        });
-        myName = people.get(uid) || "";
-        if (!snap.metadata.fromCache || snap.docs.some(function(d){ return d.id === uid; })){ peopleReady = true; clearTimeout(timer); }
-        refreshNames(); route();
-      }, fail);
-
-      db.collection("tasks").where("done", "==", false).onSnapshot(function(snap){
-        if (!snap.metadata.fromCache || snap.size > 0) tasksLoaded = true;
-        tasks.clear();
-        snap.docs.forEach(function(d){ tasks.set(d.id, d.data()); });
-        renderBoard();
-      }, fail);
-
-      db.collection("tasks").where("done", "==", true).orderBy("doneAt", "desc").limit(100).onSnapshot(function(snap){
-        if (!snap.metadata.fromCache || snap.size > 0) doneLoaded = true;
-        doneTasks.clear();
-        snap.docs.forEach(function(d){ doneTasks.set(d.id, d.data()); });
-        renderDone();
-      }, function(){});
-
-      db.collection("comments").onSnapshot(function(snap){
-        var map = new Map();
-        snap.docs.forEach(function(d){
-          var v = d.data();
-          if (!v || !v.taskId) return;
-          if (!map.has(v.taskId)) map.set(v.taskId, []);
-          map.get(v.taskId).push({ id: d.id, authorId: v.authorId, text: String(v.text || ""), createdAt: v.createdAt || 0 });
-        });
-        map.forEach(function(arr){ arr.sort(function(a, b){ return a.createdAt - b.createdAt; }); });
-        commentsByTask = map;
-        renderBoard();
-      }, function(){});
-    }).catch(function(){
-      $("#loading").hidden = true; setNotice("Couldn't start the board. Reload the page to try again.");
+    if (!configured){
+      $("#loading").hidden = true;
+      setNotice("This site isn't connected to Supabase yet. Open index.html, fill in the two values at the top, and upload it again. SETUP.md has the steps.");
+      return;
+    }
+    if (!window.supabase || !window.supabase.createClient){
+      $("#loading").hidden = true;
+      setNotice("Couldn't load the database library. Check your connection and reload the page.");
+      return;
+    }
+    sb = window.supabase.createClient(cfg.supabaseUrl, cfg.supabaseKey, {
+      auth: { persistSession: true, autoRefreshToken: true }
     });
+    sb.auth.onAuthStateChange(function(ev, s){ setTimeout(function(){ onSession(s); }, 0); });
+    sb.auth.getSession().then(function(r){ onSession(r && r.data ? r.data.session : null); })
+      .catch(function(){ onSession(null); });
+    route();
   }
   route();
   start();
 })();
 </script>
-
-</body></html>
+</body>
+</html>
